@@ -76,7 +76,7 @@ task configureVersionInfo {
         jmeFullVersion = jmeMainVersion
         jmePomVersion  = jmeVersion
         
-        if (jmeBranchName != "master") {
+        if (jmeBranchName != "master" && jmeVersionTag == "SNAPSHOT") {
             jmeFullVersion += "-${jmeBranchName}"
             jmePomVersion  += "-${jmeBranchName}"
             
