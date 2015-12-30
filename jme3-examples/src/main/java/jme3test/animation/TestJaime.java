@@ -65,6 +65,7 @@ import com.jme3.scene.Node;
 import com.jme3.scene.shape.Quad;
 import com.jme3.shadow.EdgeFilteringMode;
 import com.jme3.shadow.SpotLightShadowRenderer;
+import com.jme3.system.AppSettings;
 
 /**
  *
@@ -77,6 +78,10 @@ public class TestJaime  extends SimpleApplication {
     
     public static void main(String... argv){
         TestJaime app = new TestJaime();
+        AppSettings settings = new AppSettings(true);
+        //settings.setFullscreen(true);
+        app.setSettings(settings);
+        app.setShowSettings(false);
         app.start();
     }
 
