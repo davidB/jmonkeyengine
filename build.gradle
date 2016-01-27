@@ -18,7 +18,7 @@ apply from: file('upload.gradle')
 subprojects {
     if(!project.name.equals('jme3-android-examples')) {
         apply from: rootProject.file('common.gradle')
-        if ((jmeVersionTag != 'SNAPSHOT') && !['jme3-testdata', 'sdk'].contains(project.name)) {
+        if (!['jme3-testdata', 'sdk'].contains(project.name)) {
             apply from: rootProject.file('bintray.gradle')
         }
     } else {

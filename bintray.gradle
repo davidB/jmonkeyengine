@@ -19,3 +19,7 @@ bintray {
         labels = ['jmonkeyengine']
     }
 }
+
+bintrayUpload.onlyIf {
+    !(version ==~ /.*SNAPSHOT/)
+}
