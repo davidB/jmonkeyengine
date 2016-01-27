@@ -76,6 +76,10 @@ task configureVersionInfo {
         jmeFullVersion = jmeMainVersion
         jmePomVersion  = jmeVersion
         
+        if (jmeGitTag.startsWith(jmeMainVersion)) {
+            jmeVersionTag = ""
+            jmePomVersion = jmeGitTag
+        }
         if (jmeBranchName != "master" && jmeVersionTag == "SNAPSHOT") {
             jmeFullVersion += "-${jmeBranchName}"
             jmePomVersion  += "-${jmeBranchName}"
