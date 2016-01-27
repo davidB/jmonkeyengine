@@ -21,6 +21,6 @@ bintray {
 }
 
 bintrayUpload.onlyIf {
-    (bintray_api_key.length > 0) &&
+    (bintray_api_key.length() > 0) &&
     !(version ==~ /.*SNAPSHOT/)
 }
